@@ -28,7 +28,7 @@ Client.on("message",message=> {
     }
     
     if(cmd === `${PREFIX}kick`){
-        if(!message.member.roles.get(r => r.id === "703260383401607200")) return message.reply("You do not have permissions to do this command 🤦")
+        if(!!message.member.hasPermission(['VIEW_AUDIT_LOG', 'ADMINISTRATOR'])) return message.reply("You do not have permissions to do this command 🤦")
         let kickmember = message.mentions.members.first() || message.guild.members.get(args[0])
         if(!kickmember) return message.channel.send("Please provide a user to kick 🤦")
 
