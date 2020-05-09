@@ -31,7 +31,7 @@ Client.on("message",message=> {
     if(cmd === `${PREFIX}credits`){
         let creditsembed = new Discord.RichEmbed()
         .setTitle("Credits")
-        .addField("Bot Creator", "robotdance23#8320")
+        .addField("Bot Creator", "dank robotdance23#8320")
         .addField("Extra Credits", "Dank Will R#3929 for helping with all the scripting and setting up of the bot")
         .setTimestamp()
         .setColor("#f79f0b")
